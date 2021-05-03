@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: mybatis-plus-demo
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/common?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+
+logging:
+  level:
+    root: debug
+
+mybatis-plus:
+  config-location: classpath:mybatis/mybatis-config.xml
+  # mapper-locations配置是为了将mapper.xml指定目录，放到resourse目录下
+#  mapper-locations: com/github/mapper/*.xml
+  type-aliases-package: com.github.entity
+#  设置MyBaits 别名包扫描路径，通过该属性可以给包中的类注册别名，注册后在 Mapper 对应的 XML 文件中可以 直接使用类名，而不用使用全限定的类名（即 XML 中调用的时候不用包含包名）。

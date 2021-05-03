@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.github.mapper.UserMapper">
+
+    <!-- 配置了实体类别名，则可以直接写实体类的名称即可   -->
+    <select id="findById" resultType="User" parameterType="java.lang.Long">
+      select * from user where id = #{id}
+    </select>
+
+</mapper>
